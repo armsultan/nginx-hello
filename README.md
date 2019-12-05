@@ -1,26 +1,43 @@
 
 # NGINX webserver and test page
 
-Simple backends for various load balancing demos.
+Simple backends for proxy and load balancing demos using NGINX
 
-NGINX webserver that serves a simple page containing its hostname, IP address 
+NGINX webserver that serves a simple page containing its hostname, IP address
 and port as wells as the request URI and the local time of the webserver.
 
 Based on -- https://hub.docker.com/r/nginxdemos/hello/
 
-How to run:
-```
+### How to run
+
+```bash
 # HTML page
-$ docker run -P -d nginxdemos/hello
+docker run -P -d armsultan/hello
 
 # HTML Coffee page
-$ docker run -P -d nginxdemos/hello:coffee
+docker run -P -d armsultan/hello:coffee
 
 # HTML Tea page
-$ docker run -P -d nginxdemos/hello:coffee
+docker run -P -d armsultan/hello:tea
+
+# Plain text page
+docker run -P -d armsultan/hello:plain-text
+```
+
+### Build Docker images locally
+
+```bash
+# HTML page
+docker build -t hello .
+
+# HTML Coffee page
+docker build -t coffee -f DockerfileCoffee .
 
 # HTML Tea page
-$ docker run -P -d nginxdemos/hello:plain-text
+docker build -t tea -f DockerfileTea .
+
+# Plain text page
+docker build -t plain -f DockerfilePlainText .
 ```
 
 ## Hello
@@ -37,12 +54,13 @@ Other HTML variations include are a coffee and tea page:
 
 ## Plain Text
 
-Lastly, a plain text version of the image is available as `nginxdemos/hello:plain-text`. This version returns the same information in the plain text format:
-```
+Lastly, a plain text version of the image is available as `armsultan/hello:plain-text`. This version returns the same information in the plain text format:
+
+```bash
 $ curl <ip>:<port>
-Server address: 172.17.0.2:80
-Server name: 22becba5323d
-Date: 07/Feb/2018:16:05:05 +0000
+Server address: 172.17.0.5:80
+Server name: 4da19e5865be
+Date: 05/Dec/2019:19:07:50 +0000
 URI: /
-Request ID: 48ba0db334a6ed165e783469c2af868f
+Request ID: 99be7098fb6294c8feb007cc78a44ea1
 ```
