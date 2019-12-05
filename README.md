@@ -28,16 +28,16 @@ docker run -P -d armsultan/hello:plain-text
 
 ```bash
 # HTML page
-docker build -t hello .
+docker build --no-cache -t hello .
 
 # HTML Coffee page
-docker build -t coffee -f DockerfileCoffee .
+docker build --no-cache -t coffee -f DockerfileCoffee .
 
 # HTML Tea page
-docker build -t tea -f DockerfileTea .
+docker build --no-cache -t tea -f DockerfileTea .
 
 # Plain text page
-docker build -t plain -f DockerfilePlainText .
+docker build --no-cache -t plain-text -f DockerfilePlainText .
 ```
 
 ## Hello

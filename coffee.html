@@ -117,14 +117,14 @@
         />
 
     <div class="info">
-        <p><span>Status code:</span> <span>$status</span></p>
-        <p><span>Server address:</span> <span>$server_addr:$server_port</span></p>
+        <p><span>Status code:</span> <span>_status</span></p>
+        <p><span>Server address:</span> <span>_server_addr:_server_port</span></p>
         <p><span>Server name:</span> <span>$hostname</span></p>
-        <p class="smaller"><span>User-Agent:</span> <span>$http_user_agent</span></p>
-        <p class="smaller"><span>Cookie:</span> <span>$http_cookie</span></p>
-        <p class="smaller"><span>URI:</span> <span>$request_uri</span></p>
-        <p class="smaller"><span>Date:</span> <span>$time_local</span></p>
-        <p class="smaller"><span>URI:</span> <span>$request_uri</span></p>
+        <p class="smaller"><span>User-Agent:</span> <span>_http_user_agent</span></p>
+        <p class="smaller"><span>Cookie:</span> <span>_http_cookie</span></p>
+        <p class="smaller"><span>URI:</span> <span>_request_uri</span></p>
+        <p class="smaller"><span>Date:</span> <span>_time_local</span></p>
+        <p class="smaller"><span>URI:</span> <span>_request_uri</span></p>
     </div>
 
     <img alt="NGINX Logo" class="logo"
@@ -132,7 +132,7 @@
     <div class="check"><input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh</div>
     <div id="footer">
         <div id="center" class="center">
-            Request ID: $request_id<br />
+            Request ID: _request_id<br />
             &copy; NGINX, Inc.
             <script>document.write(new Date().getFullYear())</script>
         </div>
