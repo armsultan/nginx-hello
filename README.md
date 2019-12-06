@@ -44,23 +44,27 @@ docker build --no-cache -t plain-text -f DockerfilePlainText .
 
 Now, assuming we found out the IP address and the port that mapped to port 80 on the container, in a browser we can make a request to the webserver and get the page below:
 
-![hello](hello.png)
+![hello](images/hello.png)
 
 ## Coffee and Tea
 
-Other HTML variations include are a coffee and tea page:
-![coffee](coffee.png)
-![tea](tea.png)
+Other HTML variations include a coffee and tea page:
+![coffee](images/coffee.png)
+![tea](images/tea.png)
 
 ## Plain Text
 
 Lastly, a plain text version of the image is available as `armsultan/hello:plain-text`. This version returns the same information in the plain text format:
 
 ```bash
-$ curl <ip>:<port>
+curl <ip>:<port>
+
+Status code: 200
 Server address: 172.17.0.5:80
-Server name: 4da19e5865be
-Date: 05/Dec/2019:19:07:50 +0000
+Server name: 3431df587c68
+Date: 06/Dec/2019:15:30:53 +0000
+User-Agent: curl/7.65.3
+Cookie:
 URI: /
-Request ID: 99be7098fb6294c8feb007cc78a44ea1
+Request ID: 49141ee9a2a6a8e1f773996abc3f867a
 ```
